@@ -20,14 +20,14 @@ class A3Encryption():
             # print("check",type(ord(totalKey)))
             encrypted_ord = ord(i) ^ totalKey
             doubleEncrypted_rod = encrypted_ord ^ self.randomKey
-            print(doubleEncrypted_rod)
+            # print(doubleEncrypted_rod)
             # print(int(bin(encrypted_ord)[2:]))
 
             self.encrypted_data += str(hex(doubleEncrypted_rod)) + 'X'
 
         self.encrypted_data += str(hex(totalKey)) + 'X' + str(hex(self.randomKey))
-        print(self.encrypted_data)
-        print(type(self.encrypted_data))
+        # print(self.encrypted_data)
+        # print(type(self.encrypted_data))
         return self.encrypted_data
 
 

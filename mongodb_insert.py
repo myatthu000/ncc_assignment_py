@@ -29,10 +29,10 @@ def read_documents(client, db_name, collection_name, filter_cols):
     try:
         db = client[db_name]
         collection = db[collection_name]
-        documents = collection.find({},filter_cols)
+        documents = collection.find({}, filter_cols)
         for document in documents:
             id = len(data)
-            data.update({id:document})
+            data.update({id: document})
             # print(document)
         return data
     except Exception as e:
@@ -61,7 +61,6 @@ def delete_documents(client, db_name, collection_name, filter_query):
     except Exception as e:
         print("Error deleting documents:", str(e))
 
-
 # Usage
 # connection_string = 'mongodb://localhost:27017/'
 # client = connect_to_mongodb(connection_string)
@@ -75,7 +74,7 @@ def delete_documents(client, db_name, collection_name, filter_query):
 # create_document(client, db_name, collection_name, document)
 
 # Read documents
-# rr = read_documents(client, db_name, collection_observer_info, {"_id":0})
+# rr = read_documents(client, db_name, collection_user_info, {"_id":0})
 # print('rr' ,rr)
 
 # # Update a document

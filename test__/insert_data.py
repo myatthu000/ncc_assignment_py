@@ -24,17 +24,20 @@ def observer_info(i):
     ids = collection_observer_info.insert_one(data_form)
     print("inserted id observer data:", ids.inserted_id)
 
-def user_info():
-    user_id = random.randint(10, 10000)
-    name = "Thu Thu"+str(i)
+
+def user_info(i):
+    user_id = str(random.randint(10, 10000))
+    name = "Thu Thu" + str(i)
     email: str = "thu" + str(i) + "@gmail.com"
     password: str = "pass"
-    phone: int = 94537
-    point: int = 100
-    info: str = "User data is myat" + str(i) + "id : " + str(user_id)
-    money: int = 0
-    data_form = {"_id": user_id, "name":name, "email": email, "password": password, "phone": str(phone), "info": info,
-                 "point": point, "money": money}
+    # phone: int = 94537
+    # point: int = 100
+    # info: str = "User data is myat" + str(i) + "id : " + user_id
+    # money: int = 0
+    # data_form = {"name": name, "email": email, "password": password, "phone": str(phone), "info": info,
+    #              "point": str(point), "money": str(money)}
+
+    data_form = {"name": name, "email": email, "password": password}
     ids = collection_user_info.insert_one(data_form)
     print("inserted id user_data:", ids.inserted_id)
 
@@ -42,7 +45,6 @@ def user_info():
 if __name__ == '__main__':
 
     for i in range(5):
-        user_info()
-        products()
-        observer_info(i)
-
+        user_info(i)
+        # products()
+        # observer_info(i)
