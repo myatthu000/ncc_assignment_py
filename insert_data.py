@@ -27,7 +27,7 @@ def observer_info(i):
 
 def user_info(i):
     user_id = str(random.randint(10, 10000))
-    name = "Thu Thu" + str(i)
+    name = "ThuThu" + str(i)
     email: str = "thu" + str(i) + "@gmail.com"
     password: str = "pass"
     # phone: int = 94537

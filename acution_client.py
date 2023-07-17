@@ -69,7 +69,7 @@ class Auction_client():
 
     def register2(self, client, user_data):
         print("-------------------register------------------")
-        r_name = input("Enter your name: ")
+        r_name = input("Enter your name: ").replace(" ","")
         r_email = input("Enter your email: ")
         flag = self.email_checking(r_email)
         if flag == 1:

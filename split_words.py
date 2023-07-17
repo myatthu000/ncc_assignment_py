@@ -48,12 +48,16 @@ collection_user_info = 'user_info'
 #     print(f"JSON decoding error: {e}")
 
 
-user_datas = read_documents(client, db_name, collection_user_info,{"_id":0,"email":1})
-for i in user_datas:
-    print(user_datas[i])
-    if user_datas[i]['email'] == decrypted_list[2]:
-        print("Account is already taken: ")
-    else:
-        print("Register successfully:")
-        document = {"name":decrypted_list[1],"password":decrypted_list[2]}
-        create_document(client,db_name,collection_user_info,document)
+# user_datas = read_documents(client, db_name, collection_user_info,{"_id":0,"email":1})
+# for i in user_datas:
+#     print(user_datas[i])
+#     if user_datas[i]['email'] == decrypted_list[2]:
+#         print("Account is already taken: ")
+#     else:
+#         print("Register successfully:")
+#         document = {"name":decrypted_list[1],"password":decrypted_list[2]}
+#         create_document(client,db_name,collection_user_info,document)
+
+
+word = input("input ").replace(" ","")
+print(word)
